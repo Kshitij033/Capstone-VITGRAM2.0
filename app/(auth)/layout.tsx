@@ -1,4 +1,4 @@
-//this kayout is specificlly for the pages in (auth)
+//this layout is specificlly for the pages in (auth)
 import { ClerkProvider } from "@clerk/nextjs"
 import { Inter } from "next/font/google"
 import '../globals.css'
