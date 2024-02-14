@@ -32,6 +32,7 @@ interface Props{
     btnTitle:string
 }
 const AccountProfile=({user,btnTitle}:Props)=>{
+  
   const [files, setfiles] = useState<File[]>([])
   const{startUpload}=useUploadThing("media")
   const form=useForm({
