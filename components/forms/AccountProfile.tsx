@@ -132,6 +132,7 @@ const handleImage=(e:ChangeEvent<HTMLInputElement>,fieldChange:(value:string)=>v
                 className=" account-form_image-input" 
                 onChange={(e)=>handleImage(e,field.onChange)}/>
               </FormControl>
+              <FormMessage/>
             </FormItem>
           )}
         />
@@ -151,6 +152,7 @@ const handleImage=(e:ChangeEvent<HTMLInputElement>,fieldChange:(value:string)=>v
                 {...field}
               />
               </FormControl>
+              <FormMessage/>
             </FormItem>
           )}
         />
@@ -170,6 +172,7 @@ const handleImage=(e:ChangeEvent<HTMLInputElement>,fieldChange:(value:string)=>v
                 {...field}
               />
               </FormControl>
+              <FormMessage/>
             </FormItem>
           )}
         />
@@ -189,6 +192,7 @@ const handleImage=(e:ChangeEvent<HTMLInputElement>,fieldChange:(value:string)=>v
                 {...field}
               />
               </FormControl>
+              <FormMessage/>
             </FormItem>
           )}
         />
