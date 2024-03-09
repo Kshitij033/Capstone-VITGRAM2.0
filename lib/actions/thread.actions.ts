@@ -1,5 +1,6 @@
 "use server" //if we dont put it we cant create database actions as it is in 
 //browers, one reason is cors issue
+//in react we dont have the concept of the server and the client 
 import { revalidatePath } from "next/cache";
 import Thread from "../models/thread.model";
 import User from "../models/user.model";
