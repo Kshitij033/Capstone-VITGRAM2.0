@@ -1,4 +1,5 @@
 import ThreadCard from "@/components/cards/ThreadCard";
+import Comment from "@/components/forms/Comment";
 import { fetchThreadById } from "@/lib/actions/thread.actions";
 import { fetchUser } from "@/lib/actions/user.actions";
 import { currentUser } from "@clerk/nextjs";
@@ -24,6 +25,13 @@ const Page =async ({ params }: { params: { id: string } }) => {
         community={thread.community}
         createdAt={thread.createdAt}
         comments={thread.children}
+      />
+    </div>
+    <div className=" mt-7">
+      <Comment 
+      threadId={thread.id}
+      currentUserImg={user.imageUrl} //from clerk
+      currentUserId={JSON.stringify(userInfo._id)} //userinfo is from database
       />
     </div>
   </section>
