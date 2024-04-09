@@ -3,7 +3,6 @@ import { Button } from "@/components/ui/button";
 import {
   Form,
   FormControl,
-  FormDescription,
   FormField,
   FormItem,
   FormLabel,
@@ -19,10 +18,12 @@ import { updateUser } from "@/lib/actions/user.actions";
 import { createThread } from "@/lib/actions/thread.actions";
 
 import {useOrganization} from '@clerk/nextjs'
+import { useState } from "react";
 
 function PostThread({ userId }: { userId: string }) {
   const router = useRouter();
   const pathname = usePathname();
+  const [image,setImage]=useState("")
   const {organization}=useOrganization()
   const form = useForm({
     resolver: zodResolver(ThreadValidation), //for validation
@@ -44,6 +45,8 @@ function PostThread({ userId }: { userId: string }) {
     ) //backend actions
     router.push("/")
   }
+
+ 
   return (
     <Form {...form}>
     <form 
@@ -68,7 +71,6 @@ function PostThread({ userId }: { userId: string }) {
             </FormItem>
           )}
         />
-
         <Button type="submit" className=" bg-orange-500">
             Post your Thoughts
         </Button>
