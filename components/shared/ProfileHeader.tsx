@@ -43,7 +43,7 @@ function ProfileHeader({
        
       </div>
 
-      <p className='mt-6 max-w-lg text-base-regular text-light-2'>{bio==null?"VIT Vellore":bio}</p>
+      <p className='mt-6 max-w-lg text-base-regular text-light-2'>{bio=="org bio"?"VIT Vellore":bio}</p>
 
       <div className='mt-12 h-0.5 w-full bg-dark-3' />
     </div>
